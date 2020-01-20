@@ -1,0 +1,19 @@
+{
+  "name": "honey",
+  "version": "1.0.0",
+  "description": "Mi package UwU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prueba": "node index.js",
+    "empaquetar": "webpack ."
+  },
+  "author": "Mina",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
