@@ -3,8 +3,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
+
   entry: {
-    main: './index.js',
+    main: './src/index.js',
+    uwu: './src/hola.js',
   },
 
   output: {
@@ -12,5 +15,19 @@ module.exports = {
     filename: '[name].[hash:4].js',
   },
 
-  plugins: [new CleanWebpackPlugin(), new htmlWebpackPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new htmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'index.html'),
+    }),
+  ],
+  module: {
+    //aca establecemos las reglas para cargar nuestros modulos
+    rules: [
+      {
+        test: /\.css$/, // este le dice a webpack que archivos se van a ver afectados por nuestra regla
+        use: ['style-loader', 'css-loader'], // le damos la instruccion de que loaders vamos a usar
+      },
+    ],
+  },
 }
