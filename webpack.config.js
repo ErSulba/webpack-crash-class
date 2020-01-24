@@ -21,7 +21,6 @@ module.exports = {
       template: path.join(__dirname, 'src', 'index.html'),
     }),
   ],
-<<<<<<< HEAD
   module: {
     //aca establecemos las reglas para cargar nuestros modulos
     rules: [
@@ -31,6 +30,4 @@ module.exports = {
       },
     ],
   },
-=======
->>>>>>> fa88c36e777a9b5c6a8822b3ce44d97c69a10518
 }
